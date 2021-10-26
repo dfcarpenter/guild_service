@@ -29,7 +29,7 @@ Given the load estimates and feature requirements I would start with leveraging 
 - SQS for receiving events from portal
 
 **Caveat**:
-It's probably not really sufficient for customers to use the Django admin framework for approving invoices and should only be really used by TuitionCo team members for manaing system data. If there is an existing standardized approach to interface with the customer, say for example only through the WebPortal perhaps app.tuitionco.com) we would have to work with that team to expose APIs from the invoice system to their frontend so in the case of say a customer clicking on an email link to approve/deny an invoice that opens a link to the WebPortal which in turn queries our API and renders up a table view of the aggregate invoice which they can review and hopefully approve. 
+It's probably not really sufficient for customers to use the Django admin framework for approving invoices and should only be really used by TuitionCo team members for manaing system data. If there is an existing standardized approach to interface with the customer, say for example only through the WebPortal perhaps app.tuitionco.com) we would have to work with that team to expose APIs from the invoice system to their frontend so in the case of say a customer clicking on an email link to approve/deny an invoice that opens a link to the WebPortal which in turn queries our API and renders up a table view of the aggregate invoice which they can review and hopefully approve. I stubbed out a react app in the guild_frontend_app in the case we would need to create our own frontend 
 ### Basic Flow
 
 1. Receive expense line items by customer user from upstream system ( perhaps the web portal service/system referenced in the requirements document).
