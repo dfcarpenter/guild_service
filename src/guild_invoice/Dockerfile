@@ -35,5 +35,5 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # activate virtual environment
-ENV VIRTUAL_ENV=/home/barcode/venv
-ENV PATH="/home/barcode/venv/bin:$PATH"
+ENV VIRTUAL_ENV=/home/guild_invoice/venv
+ENV PATH="/home/guild_invoice/venv/bin:$PATH"

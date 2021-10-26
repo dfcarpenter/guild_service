@@ -4,10 +4,10 @@ services:
   web:
     build:
       context: ./src/guild_invoice
-      dockerfile: ubuntu.Dockerfile
+      dockerfile: Dockerfile
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./src/barcodesystem:/home/barcode/app
+      - ./src/guild_invoice:/home/guild_service/app
     ports:
       - 8000:8000
     env_file:
@@ -19,9 +19,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=barcode_system_dev
-      - POSTGRES_PASSWORD=barcode_system_dev
-      - POSTGRES_DB=barcode_system_dev
+      - POSTGRES_USER=guild_system_dev
+      - POSTGRES_PASSWORD=guild_system_dev
+      - POSTGRES_DB=guild_system_dev
 
 volumes:
   postgres_data:
